@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Carbon Emission Calculator</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+
+	<!-- import the webpage's stylesheet -->
+	<link rel="stylesheet" href="/style.css">
+</head>
+
+<nav class="menu-nav">
+    <ul>
+      <li><a href="index.html">🏠</a></li>
+      <li><a href="carbon.html">🌫💨</a></li>
+      <li><a href="waterp.html">👩‍🦱💧</a></li>
+      <li><a href="waterb.html">🏢💧</a></li>
+      <li><a href="info.html">📂ℹ️</a></li>
+      <li><a href="about.html">👥👥</a></li>
+    </ul>
+  </nav>
+
+<body>
+
+
+		<h1 style = "color: black; margin-top: 1.5%">Carbon Emission Calculator</h1>
+    <p><center> How much carbon do you emit annually in your house alone? Find out with this quiz!</center></p>
+
+
+	<main>
+
+		<form class="quiz">
+      <!--Explanation for the quiz question structure-->
+      <!--Inputs will only create the little radio button circles in HTML. They each need a label. We also need to give each radio button a value so we can calculate stuff in JS. So the flow here is...-->
+
+      
+    <article class = "questions"> <center>
+        <label for="electricity">1. What is your annual bill for electricity? (dollars)</label><br>
+        <input type="number" min = "0" id="electricity" name="electricity"><br>
+        <br><label for="naturalgas">2. What is your annual bill for natural gas? (dollars)</label><br>
+        <input type="number"min = "0" id="naturalgas" name="naturalgas"><br>
+        <br><label for = "fueloil">3. What is your annual bill for fuel oil? (dollars)</label><br>
+        <input type= "number" min = "0" id="fueloil" name ="fueloil"><br>
+        <br><label for = "propane">4. What is your annual bill for propane/LPG? (dollars)</label><br>
+        <input type= "number" min = "0" id="propane" name ="propane">
+      </center>
+  </article>
+  
+  
+    <center><input type="submit" class="submit" onclick=calcCarbonEmission() value="Submit!" /></center>
+    </form>
+
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        function calcCarbonEmission() {
+          // var q001 = $(`#electricity`).val();
+          // var q002 = $("naturalgas").val();
+          // var q003 = $("fueloil").val();
+          // var q004 = $("propane").val();
+
+          var q001 = document.getElementById('electricity').value;
+          var q002 = document.getElementById('naturalgas').value;
+          var q003 = document.getElementById('fueloil').value;
+          var q004 = document.getElementById('propane').value;
+
+          var _q001 = (q001 * 61.082 * 0.453592) / (11.9);
+          var _q002 = (q002 * 100 * 53.06 * 99.976) / (10.68 * 96.7);
+          var _q003 = (q003 * 10.18) / (4.02);
+          var _q004 = (q004 * 5.72) / (2.47);
+
+          var total = _q001 + _q002 + _q003 + _q004;
+          var compareToCars = total / 4600;
+          alert('Your annual carbon emission amount in your home is ' + `${total}` + ' kg CO2 / year. To put that into perspective, your carbon use in your house annually adds up to the amount of carbon ' + `${compareToCars}` + ' cars emit in one year.');
+  }
+    </script>
+
+
+  <br></br>
+  <br></br>
+  <footer>
+		Created by the Sage Hill Coders (Arietta, Ryan, Nicole, & Sabrina) for HackTable 2021.
+  </footer>
+  </body>
+</html>

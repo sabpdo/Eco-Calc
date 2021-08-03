@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=Shrikhand&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700&display=swap');
+
+* {
+  font-family: 'Istok Web', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+/* #title {
+  background-image: url("assets/favicon.png");
+   /* Center the image */
+   /*
+  background-position: 30px 0px;
+  /* Resize the background image to cover the entire container */
+  /*background-size: cover;
+} */
+
+img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  /* add padding between elements */
+  padding: 10px;
+}
+
+/* #img {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: auto;
+  padding: 10px;
+} */
+
+.aboutTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.AboutUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.title{
+  color: white;
+  background-image: url(https://rollandinc-production.s3.ca-central-1.amazonaws.com/app/uploads/2019/04/03140505/hero1.jpg);
+  background-position:center;
+  
+}
+
+.title2{
+  color:  white;
+  background-image:url(https://www.digitalfieldguide.com/wp-content/uploads/2020/04/Morning-Jewel.jpg);
+  background-position: center;
+}
+
+h1 {
+  color: white;
+  font-family: 'Shrikhand', cursive;
+  top: 5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 400%;
+}
+body{
+	/* margin-left: 80px;
+	margin-right:80px; */
+  background: #CCDDB7;
+}
+
+h2 {
+  text-align: right;
+}
+
+h3 {
+  text-align: center;
+  font-size: 250%;
+  font-family: 'Shrikhand', cursive;
+}
+
+
+footer {
+  position: relative;
+  text-align: center;
+  left: 5px;
+  right: 5px;
+  bottom: 10px; 
+}
+
+/* STYLE NAV BAR*/
+ul{
+  list-style-type: none;
+  background-color: #8CA178;
+  overflow: hidden;
+  padding: 1em;
+}
+
+.menu-nav{
+  text-align: center;
+  opacity: 0.7;
+}
+
+.menu-nav:hover{
+  opacity: 1;
+}
+
+li{
+  display: inline;
+  font-size: 1.3em;
+  padding: 1em;
+  font-weight: bold;
+}
+
+li a{
+  text-decoration: none;
+  color: black;
+}
+
+/* unvisited link */
+a:link {
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  text-decoration: none;
+}
+
+/* Add an active class to highlight the current page */
+li a.active {
+  text-decoration: none;
+}
+
+li:hover{
+ background-color: #486140;
+ font-weight: bold;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  /* display: none; */
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown menu on hover
+#drop:active .dropdown-content {
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
+}
+
+/* Show the dropdown menu on hover */
+#drop:active .dropdown-content {
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
+} */
+
+
+/* form css */
+
+/* STYLE SECTIONING TAGS */
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+h2 {
+  margin-top: 2em; 
+}
+
+/* STYLE FLEX CONTAINER */
+.question {
+  display: flex;
+  margin-top: 2em;
+}
+  
+/* STYLE FLEX ITEM */
+.answer-choice {
+  margin: 5px;
+  background-color: transparent;
+  background-image: none;
+}
+
+/* STYLE IMAGES */
+.answer-choice img {
+  height: 10em;
+}
+
+p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+label {
+  background-color: transparent;
+  background-image: none;
+}
+
+/* STYLE BUTTON */
+.submit { 
+  margin-top: 15px;
+  border-style: dotted;
+  /*background-image: linear-gradient(to left, #ffffff, #dedede);*/
+  background-image: linear-gradient(to left, #988E61,#69995D);
+  padding: 10px;
+}
+
+.submit:hover {
+  border-style:ridge;
+}
+
+#submit { 
+  margin-top: 15px;
+  border-style: dotted;
+  background-image: linear-gradient(to left, #988E61,#69995D);
+  padding: 10px;
+}
+
+.source {
+  background-color: #AAC2D9;
+  padding: 5%;
+  border: 2px solid black;
+  
+}
+.sustain {
+  background-color: #AAC2D9;
+  padding: 5%;
+  border: 2px solid black;
+}
+
+.formula{
+  background-color: #AAC2D9;
+  padding: 5%;
+  border: 2px solid black;
+}
+
+.SDG {
+  width: 900px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+/* Media Queries */
+/* These help make the website more mobile-friendly! */
+@media screen and (max-width: 733px) {
+  h1 {
+    font-size: 200%;
+    margin:0;
+    padding:0;
+    border:0;
+  }
+
+  /*607*/
+
+  .sub-text {
+    font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 607px) {
+  p {
+    margin:0px;
+    padding:0px;
+    border:0px;
+    font-size: 75%;
+  }
+/*896*/
+  .SDG {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+}
+
+@media screen and (max-width: 896px) {
+/*896*/
+  .SDG {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+}
+
+.AboutUs{
+  background: #DDE6EB;
+}
+
+.aboutTitle{
+  background: #DDE6EB;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+td {
+  text-align: center;
+}
+
+#directs {
+  padding: 5%;
+  border-style: solid;
+  border: 2px solid black;
+  background-color: #AAC2D9;
+}
+
+#boxes {
+  margin-left: 5%;
+  margin-right: 5%;
+}

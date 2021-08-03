@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Business Water Calculator</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+
+	<!-- import the webpage's stylesheet -->
+	<link rel="stylesheet" href="/style.css">
+</head>
+
+<nav class="menu-nav">
+    <ul>
+      <li><a href="index.html">🏠</a></li>
+      <li><a href="carbon.html">🌫💨</a></li>
+      <li><a href="waterp.html">👩‍🦱💧</a></li>
+      <li><a href="waterb.html">🏢💧</a></li>
+      <li><a href="info.html">📂ℹ️</a></li>
+      <li><a href="about.html">👥👥</a></li>
+    </ul>
+  </nav>
+
+<body>
+	<h1 style = "color: black; margin-top: 1.5%">Water Calculator for Businesses</h1>
+  <div id = "direct">
+    <p><center> How much water does your business use annually? Find out with this quiz!</center></p>
+    <p><center>Pick one of the three ways to calculate your annual water usage! </center> </p>
+  </div>
+  <br>
+	<main>
+    <center>
+		<form class="quiz">
+
+      <article class = "questions">
+        <p>
+          <label for="size">How big is the total size of your store(s) (if you have more than one location, add up the size of each location)?</label><br>
+          <input type="number" min = "0" id="sizeStore" name="sizeStore">
+          <select name = "unit" class="unit">
+            <option value = "squareInches">square inches</option>
+            <option value = "squareFeet">square feet</option>
+            <option value = "squareYards">square yards</option>
+            <option value = "squareMeters">square meters </option>
+          </select>
+          <br>
+          <h3> OR </h3>
+          <br><br>
+          <label for="waterBill">What is your water bill per month (dollars) (if you have more than one location, add up the total of each water bill?</label><br>
+          <input type="number" min = "0" id="waterBill" name="waterBill"><label for="waterBill">  &nbsp&nbspUSD   dollars</label>
+          <br><br>
+          <h3> OR </h3>
+          <br>
+          <label for = "collectiveWater">How much water do you collectively use each month?</label><br>
+          <input type= "number" min = "0" id="collectiveWater" name ="collectiveWater">
+          <select name = "unit2" class="unit2">
+            <option value = "gallons">gallons</option>
+            <option value = "liters">liters</option>
+            <option value = "cubicMeters">cubic meters</option>
+          </select>
+        </p>
+      </article>
+
+    
+        <center><input type="submit" class="submit" onclick=calcWaterEmission() value="Submit!" /></center>
+    </form>
+    <div id="dataTable"></div>
+    </center>
+    
+  </main>
+  
+<script>
+
+</script>
+
+  <script src="script.js" async defer></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    var annualWaer;
+
+    function calcWaterEmission(){
+      var sizeOfStore = document.getElementById('sizeStore').value;
+      var unitStore = $(`#unit option:selected`).val();
+        if (unitStore = "squareInches" && sizeOfStore!=null && sizeOfStore>0){
+          annualWater = (sizeOfStore * 20) / 144;
+          var compareToPool = annualWater / 660000;
+          alert('Your annual water usage in your business is ' + `${annualWater}` + ' gallons / year. To put that into perspective, your water use in your business annually adds up to the amount of water ' + `${compareToPool}` + ' Olympic swimming pools hold.');
+        }else if(unitStore = "squareFeet"&& sizeOfStore!=null&& sizeOfStore>0){
+          var annualWater = (sizeOfStore * 20);
+          var compareToPool = annualWater / 660000;
+          alert('Your annual water usage in your business is ' + `${annualWater}` + ' gallons / year. To put that into perspective, your water use in your business annually adds up to the amount of water ' + `${compareToPool}` + ' Olympic swimming pools hold.');
+        }else if(unitStore = "squareYards"&& sizeOfStore!=null&& sizeOfStore>0){
+          var annualWater = (sizeOfStore * 20 * 9);
+          var compareToPool = annualWater / 660000;
+          alert('Your annual water usage in your business is ' + `${annualWater}` + ' gallons / year. To put that into perspective, your water use in your business annually adds up to the amount of water ' + `${compareToPool}` + ' Olympic swimming pools hold.');
+        }else if(unitStore = "squareMeters" && sizeOfStore!=null&& sizeOfStore>0){
+          var annualWater = (sizeOfStore*20*10.7639);
+          var compareToPool = annualWater / 660000;
+          alert('Your annual water usage in your business is ' + `${annualWater}` + ' gallons / year. To put that into perspective, your water use in your business annually adds up to the amount of water ' + `${compareToPool}` + ' Olympic swimming pools hold.');
+        }
+          
+        var waterBill = document.getElementById('waterBill').value;
+        var annualWater = (waterBill / 1.50) * 1000 * 12;
+        if (waterBill>0 && waterBill!=null){
+          var compareToPool = annualWater / 660000;
+          alert('Your annual water usage in your business is ' + `${annualWater}` + ' gallons / year. To put that into perspective, your water use in your business annually adds up to the amount of water ' + `${compareToPool}` + ' Olympic swimming pools hold.');
+        }
+    
+
+        var collectiveWaterUsed = document.getElementById('collectiveWater').value;
+        var unitWater = $(`#unit2 option:selected`).val();
+        if (unitStore = "gallons"&& collectiveWaterUsed!=null&& collectiveWaterUsed>0){
+          var annualWater = collectiveWaterUsed * 12;
+          var compareToPool = annualWater / 660000;
+        alert('Your annual water usage in your business is ' + `${annualWater}` + ' gallons / year. To put that into perspective, your water use in your business annually adds up to the amount of water ' + `${compareToPool}` + ' Olympic swimming pools hold.');
+        }else if(unitStore = "liters"&& collectiveWaterUsed!=null && collectiveWaterUsed>0){
+          var annualWater = collectiveWaterUsed * 0.264172 * 12;
+          var compareToPool = annualWater / 660000;
+         alert('Your annual water usage in your business is ' + `${annualWater}` + ' gallons / year. To put that into perspective, your water use in your business annually adds up to the amount of water ' + `${compareToPool}` + ' Olympic swimming pools hold.');
+        }else if(unitStore = "cubicMeters"&& collectiveWaterUsed!=null&& collectiveWaterUsed>0){
+          var annualWater = collectiveWaterUsed * 264.172 * 12;
+          var compareToPool = annualWater / 660000;
+          alert('Your annual water usage in your business is ' + `${annualWater}` + ' gallons / year. To put that into perspective, your water use in your business annually adds up to the amount of water ' + `${compareToPool}` + ' Olympic swimming pools hold.');
+        }
+
+
+        if (collectiveWaterUsed==null && waterBill==null && sizeStore==null || collectiveWaterUsed==0 && waterBill==0 && sizeStore==0){
+          alert('Please enter in a nonzero number in one of the slots.');
+        }
+      }
+  </script>
+
+  <br></br>
+  <br></br>
+  <footer>
+		Created by the Sage Hill Coders (Arietta, Ryan, Nicole, & Sabrina) for HackTable 2021.
+  </footer>
+  </body>
+</html>

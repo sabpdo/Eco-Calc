@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Personal Water Calculator</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+
+	<!-- import the webpage's stylesheet -->
+	<link rel="stylesheet" href="/style.css">
+</head>
+
+<nav class="menu-nav">
+    <ul>
+      <li><a href="index.html">🏠</a></li>
+      <li><a href="carbon.html">🌫💨</a></li>
+      <li><a href="waterp.html">👩‍🦱💧</a></li>
+      <li><a href="waterb.html">🏢💧</a></li>
+      <li><a href="info.html">📂ℹ️</a></li>
+      <li><a href="about.html">👥👥</a></li>
+    </ul>
+  </nav>
+
+<body>
+
+    <br>
+		<h1 style = "color: black">Personal Water Usage Calculator</h1>
+    <p><center> How much water do you emit annually in your house alone? Find out with this quiz!</center></p>
+    <br>
+
+
+	<main>
+
+		<form class="quiz">
+      <!--Explanation for the quiz question structure-->
+      <!--Inputs will only create the little radio button circles in HTML. They each need a label. We also need to give each radio button a value so we can calculate stuff in JS. So the flow here is...-->
+
+    <center>
+    <article class = "question1">
+      <p>
+        1. How often do you take showers each week?</p>
+
+      <select name = "number_shower" id="number_shower">
+          <option value = "0">0</option>
+          <option value = "1">1</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+          <option value = "15">15</option>
+          <option value = "16">16</option>
+          <option value = "17">17</option>
+          <option value = "18">18</option>
+          <option value = "19">19</option>
+          <option value = "20">20</option>
+      </select>
+      <label for="number_shower">times per week</label>
+
+      <select name = "number_shower_lowFlow" id="number_shower_lowFlow">
+          <option value="with">with a water-conserving/low-flow showerhead</option>
+          <option value="without">without a water-conserving/low-flow showerhead </option>
+      </select>
+      <label for="number_shower_lowFlow">for</label>
+
+      <select name = "number_shower_minutes" id="number_shower_minutes">
+          <option value = "0">0</option>
+          <option value = "1">1</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+          <option value = "15">15</option>
+          <option value = "16">16</option>
+          <option value = "17">17</option>
+          <option value = "18">18</option>
+          <option value = "19">19</option>
+          <option value = "20">20</option>
+          <option value = "25">25</option>
+          <option value = "30">30</option>
+          <option value = "40">40</option>
+      </select>
+      <label for="number_shower_minutes">minutes</label>
+
+      <br />
+      <br />
+  </article>
+
+  <article class = "question2"> 
+      <p>
+        2. How often do you wash your hands/face per day?</p>
+
+        <select name = "number_wash" id="number_wash">
+          <option value = "0">0</option>
+          <option value = "1">1</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+          <option value = "15">15</option>
+          <option value = "16">16</option>
+          <option value = "17">17</option>
+          <option value = "18">18</option>
+          <option value = "19">19</option>
+          <option value = "20">20</option>
+      </select>
+      <label for="number_wash">times per day</label>
+
+      <select name = "number_wash_waterRunning" id="number_wash_waterRunning">
+          <option value="with">with the water running</option>
+          <option value="without">without the water running</option>
+      </select>
+      
+      <br />
+      <br />
+  </article>
+
+<article class = "question3">
+      <p>
+        3. How often do you brush your teeth everyday?</p>
+
+      <select name = "number_teeth" id="number_teeth">
+          <option value = "0">0</option>
+          <option value = "0.5">0.5</option>
+          <option value = "1">1</option>
+          <option value = "1.5">1.5</option>
+          <option value = "2">2</option>
+          <option value = "2.5">2.5</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+      </select>
+      <label for="number_teeth">times per day</label>
+
+      <select name = "number_teeth_waterRunning" id="number_teeth_waterRunning">
+          <option value = "withwaterrunning">with the water running</option>
+          <option value = "withoutwaterrunning">without the water running</option>
+      </select>
+
+      <br />
+      <br />
+  </article>
+
+
+
+<article class = "question4">
+      <p>
+        4. How many bottles (750 mL or 25.36 oz)  of water do you drink per day?</p>
+
+      <select name = "number_bottles" id="number_bottles">
+          <option value = "0">0</option>
+          <option value = "0.5">0.5</option>
+          <option value = "1">1</option>
+          <option value = "1.5">1.5</option>
+          <option value = "2">2</option>
+          <option value = "2.5">2.5</option>
+          <option value = "3">3</option>
+          <option value = "3.5">3.5</option>
+          <option value = "4">4</option>
+          <option value = "4.5">4.5</option>
+          <option value = "5">5</option>
+          <option value = "5.5">5.5</option>
+          <option value = "6">6</option>
+          <option value = "6.5">6.5</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+      </select>
+      <label for="number_bottles">bottles per day</label>
+
+      <br />
+      <br />
+  </article>
+
+
+    <article class = "question5">
+      <p>
+        5. How many loads of laundry do you do per week?</p>
+
+      <select name = "number_laundry" id="number_laundry">
+          <option value = "0">0</option>
+          <option value = "1">1</option>
+          <option value = "1.5">1.5</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+      </select>
+      <label for="number_laundry"> loads of laundry per week</label>
+      
+      <br>
+      <br>
+  
+  </article>
+  
+<article class = "question6">
+      <p>
+        6. How many times do you cook per day?</p>
+
+      <select name = "number_cook" id="number_cook">
+          <option value = "0">0</option>
+          <option value = "0.1">0.1</option>
+          <option value = "0.15">0.15</option>
+          <option value = "0.2">0.2</option>
+          <option value = "0.25">0.25</option>
+          <option value = "0.33">0.33</option>
+          <option value = "0.5">0.5</option>
+          <option value = "0.75">0.75</option>
+          <option value = "1">1</option>
+          <option value = "1.5">1.5</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+
+      </select>
+      <label for="number_cook">times per day</label>
+
+      <br />
+      <br />
+  </article>
+
+
+<article class = "question7">
+      <p>
+        7. How many times do you wash your car per year?</p>
+
+      <select name = "number_car" id="number_car">
+          <option value = "0">0</option>
+          <option value = "1">1</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "10">9</option>
+          <option value = "12">10</option>
+          <option value = "15">11</option>
+          <option value = "20">12</option>
+          <option value = "30">13</option>
+          <option value = "50">14</option>
+      </select>
+      <label for="number_car">times per year</label>
+
+      <br />
+      <br />
+  
+  </article>
+
+
+<article class = "question8">
+      <p>
+        8. How many times do you flush the toilet per day?</p>
+
+      <select name = "number_toilet" id="number_toilet">
+          <option value = "0">0</option>
+          <option value = "1">1</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+          <option value = "15">15</option>
+          <option value = "16">16</option>
+          <option value = "17">17</option>
+          <option value = "18">18</option>
+          <option value = "19">19</option>
+          <option value = "20">20</option>
+      </select>
+      <label for="number_toilet">times per day</label>
+
+      <br />
+      <br />
+  
+  </article>
+
+
+<article class = "question9">
+      <p>
+        9. How many times do you use the dishwasher per week?</p>
+
+      <select name = "number_dishwasher" id="number_dishwasher">
+          <option value = "0">0</option>
+          <option value = "1">1</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+          <option value = "15">15</option>
+          <option value = "16">16</option>
+          <option value = "17">17</option>
+          <option value = "18">18</option>
+          <option value = "19">19</option>
+          <option value = "20">20</option>
+      </select>
+      <label for="number_dishwasher">times per week</label>
+
+      <br />
+      <br />
+  
+</article>
+
+
+
+<article class = "question10">
+      <p>
+        10. How many times do you shave per month?</p>
+
+      <select name = "number_shave" id="number_shave">
+          <option value = "0">0</option>
+          <option value = "1">1</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+          <option value = "15">15</option>
+          <option value = "16">16</option>
+          <option value = "17">17</option>
+          <option value = "18">18</option>
+          <option value = "19">19</option>
+          <option value = "20">20</option>
+          <option value = "25">25</option>
+          <option value = "31">31</option>
+      </select>
+      <label for="number_shave">times per month</label>
+
+      <br />
+      <br />
+  
+</article>
+  
+<article class = "question11">
+      <p>
+        11. How many leaky toilets do you have?</p>
+
+      <select name = "number_leakyToilet" id="number_leakyToilet">
+          <option value = "0">0</option>
+          <option value = "1">1</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+          <option value = "15">15</option>
+          <option value = "16">16</option>
+          <option value = "17">17</option>
+          <option value = "18">18</option>
+          <option value = "19">19</option>
+          <option value = "20">20</option>
+      </select>
+      <label for="number_leakyToilet">leaky toilets</label>
+
+      <br />
+      <br />
+</article>
+      
+   <article class = "question12">
+      <p>
+        12. How many dripping taps do you have?</p>
+
+      <select name = "number_taps" id="number_taps">
+          <option value = "0">0</option>
+          <option value = "1">1</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+          <option value = "15">15</option>
+          <option value = "16">16</option>
+          <option value = "17">17</option>
+          <option value = "18">18</option>
+          <option value = "19">19</option>
+          <option value = "20">20</option>
+      </select>
+      <label for="number_taps">dripping taps</label>
+
+      <br />
+      <br />
+  
+  </article>
+  
+    <article class = "question13">
+      <p>
+        13. How many times do you eat beef per month? (on average, it's 0.5 pounds of meat per meal) </p>
+
+      <select name = "pounds_beef" id="pounds_beef">
+          <option value = "0">0</option>
+          <option value = "0.25">0.25</option>
+          <option value = "0.5">0.5</option>
+          <option value = "0.75">0.75</option>
+          <option value = "1">1</option>
+          <option value = "1.25">1.25</option>
+          <option value = "1.5">1.5</option>
+          <option value = "1.75">1.75</option>
+          <option value = "2">2</option>
+      </select>
+      <label for="pounds_beef">pounds of beef</label>
+
+
+      <select name = "number_beef" id="number_beef">
+          <option value = "0">0</option>
+          <option value = "1">1</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+          <option value = "15">15</option>
+          <option value = "16">16</option>
+          <option value = "17">17</option>
+          <option value = "18">18</option>
+          <option value = "19">19</option>
+          <option value = "20">20</option>
+          <option value = "25">25</option>
+          <option value = "30">30</option>
+          <option value = "35">35</option>
+          <option value = "40">40</option>
+
+      </select>
+      <label for="number_beef">times per month</label>
+
+      <br />
+      <br />
+  
+  </article>
+
+      <article class = "question14">
+      <p>
+        14. How many times do you eat chicken per month? (on average, it's 0.5 pounds of meat per meal) </p>
+
+      <select name = "pounds_chicken" id="pounds_chicken">
+          <option value = "0">0</option>
+          <option value = "0.25">0.25</option>
+          <option value = "0.5">0.5</option>
+          <option value = "0.75">0.75</option>
+          <option value = "1">1</option>
+          <option value = "1.25">1.25</option>
+          <option value = "1.5">1.5</option>
+          <option value = "1.75">1.75</option>
+          <option value = "2">2</option>
+      </select>
+      <label for="pounds_chicken">pounds of chicken</label>
+
+      <select name = "number_chicken" id="number_chicken">
+          <option value = "0">0</option>
+          <option value = "1">1</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+          <option value = "15">15</option>
+          <option value = "16">16</option>
+          <option value = "17">17</option>
+          <option value = "18">18</option>
+          <option value = "19">19</option>
+          <option value = "20">20</option>
+          <option value = "25">25</option>
+          <option value = "30">30</option>
+          <option value = "35">35</option>
+          <option value = "40">40</option>
+      </select>
+      <label for="number_chicken">times per month</label>
+
+      <br />
+      <br />
+  
+  </article>
+
+        <article class = "question15">
+      <p>
+        15. How many times do you eat pork per month? (on average, it's 0.5 pounds of meat per meal) </p>
+
+      <select name = "pounds_pork" id="pounds_pork">
+          <option value = "0">0</option>
+          <option value = "0.25">0.25</option>
+          <option value = "0.5">0.5</option>
+          <option value = "0.75">0.75</option>
+          <option value = "1">1</option>
+          <option value = "1.25">1.25</option>
+          <option value = "1.5">1.5</option>
+          <option value = "1.75">1.75</option>
+          <option value = "2">2</option>
+      </select>
+      <label for="pounds_pork">pounds of pork</label>
+
+      <select name = "number_pork" id="number_pork">
+          <option value = "0">0</option>
+          <option value = "1">1</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
+          <option value = "6">6</option>
+          <option value = "7">7</option>
+          <option value = "8">8</option>
+          <option value = "9">9</option>
+          <option value = "10">10</option>
+          <option value = "11">11</option>
+          <option value = "12">12</option>
+          <option value = "13">13</option>
+          <option value = "14">14</option>
+          <option value = "15">15</option>
+          <option value = "16">16</option>
+          <option value = "17">17</option>
+          <option value = "18">18</option>
+          <option value = "19">19</option>
+          <option value = "20">20</option>
+          <option value = "25">25</option>
+          <option value = "30">30</option>
+          <option value = "35">35</option>
+          <option value = "40">40</option>
+      </select>
+      <label for="number_pork">times per month</label>
+
+      <br />
+      <br />
+  
+  </article>
+  
+      <input type="submit" onclick="submitQuiz()" id="submit" value="Submit!"/>
+    </form>
+    <div id="dataTable"></div>
+    </center>
+ 
+  </main>
+
+<br>
+<br>
+
+<script>
+
+</script>
+
+    <script src="script.js" async defer></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      function submitQuiz(){
+         var numShower = $(`#number_shower option:selected`).val();
+        //  alert(`${numShower}`);
+         var timeShower = $(`#number_shower_minutes option:selected`).val();
+        //  alert(`${timeShower}`);
+         var showerHead = $(`#number_shower_lowFlow option:selected`).val();
+          // alert(`${showerHead}`);
+         if(showerHead == "with"){
+           var annualShower = numShower * timeShower * 7.57082 * 52;
+          //  alert(`${annualShower}`);
+         }else if(showerHead == "without"){
+           var annualShower = numShower * timeShower * 9.4625 * 52;
+          //  alert(`${annualShower}`);
+         }else{
+           alert(`There's an error! showerHead is neither with nor without!`);
+         }
+        //  alert(`${annualShower}`);
+        //e.preventDefault();
+        var numWash = $(`#number_wash option:selected`).val();
+         //alert(`${numWash}`);
+         var waterRunning = $(`#number_wash_waterRunning option:selected`).val();
+          //alert(`${waterRunning}`);
+         if(waterRunning == "with"){
+           var annualWash = numWash * 15.1416 * 365;
+           //alert(`${annualWash}`);
+         }else if(waterRunning == "without"){
+           var annualWash = numWash * 11.3562 * 365;
+           //alert(`${annualWash}`);
+         }else{
+           alert(`There's an error! showerHead is neither with nor without!`);
+         }
+       // alert(`${annualShower + annualWash}`);
+        //e.preventDefault();
+          var numTeeth = $(`#number_teeth option:selected`).val();
+         //alert(`${numTeeth}`);
+         var waterRunning = $(`#number_teeth_waterRunning option:selected`).val();
+         //alert(`${waterRunning}`);
+         if(waterRunning == "withwaterrunning"){
+           var annualBrush = numTeeth * 15.1416 * 365;
+          //alert(`${annualBrush}`);
+         }else if(waterRunning == "withoutwaterrunning"){
+           var annualBrush = numTeeth * 0.9464 * 365;
+          // alert(`${annualBrush}`);
+         }else{
+           alert(`There's an error! waterRunning is neither with nor without!`);
+         }
+        //alert(`${annualShower + annualWash + annualBrush}`);
+        //e.preventDefault();
+         var numBottles = $(`#number_bottles option:selected`).val();
+         //alert(`${numBottles}`);
+         var annualBottles = numBottles * 0.75 * 365
+         //alert(`${annualBottles}`)
+         //alert(`${annualShower + annualWash + annualBrush + annualBottles}`);
+        //e.preventDefault();
+        var numLoads = $(`#number_laundry option:selected`).val();
+         //alert(`${numLoads}`);
+         //var laundryType = $(`#laundry_type option:selected`).val();
+         //alert(`${laundryType}`);
+         //if(laundryType == 20){
+         // var annualLaundry = numLoads * 71.9228 * 52;
+          //alert(`${annualLaundry}`);
+         //}else if(laundryType == 14){}
+           var annualLaundry = numLoads * 71.9228 * 52;
+           // alert(`${annualLaundry}`);
+        //  /else{
+        //    alert(`There's an error! waterRunning is neither with nor without!`);
+        //  }///
+        //alert(`${annualShower + annualWash + annualBrush + annualBottles + annualLaundry}`);
+        //e.preventDefault();
+        var numCook = $(`#number_cook option:selected`).val();
+         //alert(`${numCook}`);
+         var annualCook = numCook * 5.67812 * 365
+         //alert(`${annualCook}`)
+         //alert(`${annualShower + annualWash + annualBrush + annualBottles + annualLaundry + annualCook}`);
+        //e.preventDefault();
+        var numCar = $(`#number_car option:selected`).val();
+        //alert(`${numCar}`)
+        var annualCar = numCar * 283.906
+        //alert(`${annualCar}`)
+        //alert(`${annualShower + annualWash + annualBrush + annualBottles + annualLaundry + annualCook + annualCar}`);
+        //e.preventDefault();
+        var numToilet = $(`#number_toilet option:selected`).val();
+        //alert(`${numToilet}`)
+        var annualToilet = numToilet * 6.05666 * 365
+        //alert(`${annualToilet}`)
+        //alert(`${annualShower + annualWash + annualBrush + annualBottles + annualLaundry + annualCook + annualCar + annualToilet}`);
+        //e.preventDefault();
+        var numDishwasher = $(`#number_dishwasher option:selected`).val();
+        //alert(`${numDishwasher}`)
+        var annualDishwasher = numDishwasher * 22.7125 * 52
+        //alert(`${annualDishwasher}`)
+        //alert(`${annualShower + annualWash + annualBrush + annualBottles + annualLaundry + annualCook + annualCar + annualToilet + annualDishwasher}`);
+        //e.preventDefault();
+        var numShave = $(`#number_shave option:selected`).val();
+        //alert(`${numShave}`)
+        var annualShave = numShave * 3.78541 * 12
+        //alert(`${annualShave}`)
+        //alert(`${annualShower + annualWash + annualBrush + annualBottles + annualLaundry + annualCook + annualCar + annualToilet + annualDishwasher + annualShave}`);
+        //e.preventDefault();
+        var numLeakyToilet = $(`#number_leakyToilet option:selected`).val();
+        //alert(`${numLeakyToilet}`)
+        var annualLeakyToilet = numLeakyToilet * 400 * 365;
+        //alert(`${annualLeakyToilet}`)
+        //alert(`${annualShower + annualWash + annualBrush + annualBottles + annualLaundry + annualCook + annualCar + annualToilet + annualDishwasher + annualShave + annualLeakyToilet}`);
+        //e.preventDefault();
+        var numTaps = $(`#number_taps option:selected`).val();
+        //alert(`${numTaps}`)
+        var annualTaps = numTaps * 144 * 365
+        //alert(`${annualTaps}`)
+        //alert(`${annualShower + annualWash + annualBrush + annualBottles + annualLaundry + annualCook + annualCar + annualToilet + annualDishwasher + annualShave + annualLeakyToilet + annualTaps}`);
+        //e.preventDefault();
+        var poundsBeef = $(`#pounds_beef option:selected`).val();
+        //alert(`${poundsBeef}`)
+        var numberBeef = $(`#number_beef option:selected`).val();
+        //alert(`${numberBeef}`)
+        var annualBeef = poundsBeef * numberBeef * 6809.215 * 12
+        //alert(`${annualBeef}`)
+        //alert(`${annualShower + annualWash + annualBrush + annualBottles + annualLaundry + annualCook + annualCar + annualToilet + annualDishwasher + annualShave + annualLeakyToilet + annualTaps + annualBeef}`);
+        //e.preventDefault();
+        var poundsChicken = $(`#pounds_chicken option:selected`).val();
+        //alert(`${poundsChicken}`)
+        var numberChicken = $(`#number_chicken option:selected`).val();
+        //alert(`${numberChicken}`)
+        var annualChicken = poundsChicken * numberChicken * 1771.37 * 12
+        //alert(`${annualChicken}`)
+       //alert(`${annualShower + annualWash + annualBrush + annualBottles + annualLaundry + annualCook + annualCar + annualToilet + annualDishwasher + annualShave + annualLeakyToilet + annualTaps + annualBeef + annualChicken}`);
+        //e.preventDefault();
+        var poundsPork = $(`#pounds_pork option:selected`).val();
+        //alert(`${poundsPork}`)
+        var numberPork = $(`#number_pork option:selected`).val();
+        //alert(`${numberPork}`)
+        var annualPork = poundsPork * numberPork * 2180.16 * 12;
+        //alert(`${annualPork}`)
+        var total = annualShower + annualWash + annualBrush + annualBottles + annualLaundry + annualCook + annualCar + annualToilet + annualDishwasher + annualShave + annualLeakyToilet + annualTaps + annualBeef + annualChicken + annualPork;
+
+        var swimmingPools = total / 2500000;
+        var averageWater = 414502;
+        if (total>averageWater){
+          alert('Your annual water usage is ' + `${total}` + ' Liters. To put that into perspective, the amount of water you use per year can fill up ' + `${swimmingPools}` + ' Olympic-size swimming pools. Your water usage is more than the average household water usage in the US. ');
+        }
+        else if (total<averageWater){
+          alert('Your annual water usage is ' + `${total}` + ' Liters. To put that into perspective, the amount of water you use per year can fill up ' + `${swimmingPools}` + ' Olympic-size swimming pools. Your water usage is less than the average household water usage in the US. ');
+        }
+        else if (total == averageWater)
+        {
+          alert('Your annual water usage is ' + `${total}` + ' Liters. To put that into perspective, the amount of water you use per year can fill up ' + `${swimmingPools}` + ' Olympic-size swimming pools. Your water usage is equal to the average household water usage in the US. ');
+        }
+
+      
+        //e.preventDefault();
+        
+      }
+//       var banana = 1;
+//       //alert(`${banana}!`);
+//       var dataTable = $('#dataTable');
+//       dataTable.append(`
+//       <br>
+//       <br>
+//       <table style="width:100%">
+//   <tr>
+//     <th>TYPE</th>
+//     <th>ANNUAL EMISSION</th> 
+//   </tr>
+//   <tr>
+//     <td>Shower</td>
+//     <td>/yr ${banana}</td>
+//   </tr>
+//   <tr>
+//     <td>natural gas</td>
+//     <td>(n * 1000 * 53.06 * 99976) / (10.68 * 96.7)
+// <br> kg CO<sub>2</sub> / year</td>
+//   </tr>
+//   <tr>
+//     <td>fuel oil</td>
+//     <td>(n * 10.18) / (4.02)
+// <br> kg CO<sub>2</sub> / year</td>
+//   </tr>
+//   <tr>
+//     <td>propane</td>
+//     <td>(n * 5.72) / (2.47)
+// <br> kg CO<sub>2</sub> / year</td>
+// </table>
+//       `);
+      
+    </script>
+
+  <br>
+  <footer>
+		Created by the Sage Hill Coders (Arietta, Ryan, Nicole, & Sabrina) for HackTable 2021.
+  </footer>
+  </body>
+
+
+  
+</html>
