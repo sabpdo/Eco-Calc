@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Calc</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <!-- import the favicon -->
+    <link type="icon/png" rel="icon" href="assets/favicon.png">
+  </head>
+
+  <nav class="menu-nav">
+    <ul>
+      <li><a href="index.html">🏠</a></li>
+      <li><a href="carbon.html">🌫💨</a></li>
+      <li><a href="waterp.html">👩‍🦱💧</a></li>
+      <li><a href="waterb.html">🏢💧</a></li>
+      <li><a href="info.html">📂ℹ️</a></li>
+      <li><a href="about.html">👥👥</a></li>
+    </ul>
+  </nav>
+<!-- Yes, this is very disorganized. lol --
+>
+  <body
+>
+    <script src="script.js"></script>
+ 
+     
+     <p> Option 1 (i.e. water usage calculator for homes)(click to use) </p>
+     <p> Option 2 (i.e. water usage calculator for businesses) (click to use) </p>
+    <p> Option 3 (i.e. full "carbon footprint" calculator) (click to use) </p>
+   >
+     <p> Click here to learn more about how to be sustainable (redirect to bottom) </p>
+    <p> Click here to find out where we got our data, or if you wish to calculate yourself </p>
+<!-- The following info about "contact us" is me testing code -->
+<div class= "title">
+  <h1 class="title-text"> <br> Welcome to Eco-Calc.</h1>
+  <h1 class="title-text"> <br>Your go-to calculator for all things sustainable.</h1>
+  <br></br>
+  <br></br>
+</div>
+
+<br></br>
+<h3> Our Calculators </h3>
+<div class = "center">
+    <li><a href="carbon.html">🌫💨Carbon Emission Calculator</a></li> <br>
+      <li><a href="waterp.html">👩‍🦱💧Personal Water Usage Calculator</a></li>
+      <li><a href="waterb.html">🏢💧Water Usage Calculator for Businesses</a></li>
+    
+  
+  <br></br>
+</div>
+
+<h3> Other Pages </h3>
+<div class = "center">
+      <li><a
+      href="info.html">📂ℹ️More Information</a></li>
+      <li><a href="about.html">👥👥About</a></li>
+  <br>
+</div>
+
+<br></br>
+<div class = "title2">
+  <br>
+  <h1 class="title-text sub-text"> Personalized eco-friendly recommendations for you.</h1>
+  <br>
+</div>
+<br></br>
+
+
+<!--
+<p>This is the example of <i>Redirect
+ to a particular section using HTML on same page</i>
+ </p>-->
+<center>
+      <a href="info.html#formulas">Think the calculator miscalculated? Click here to learn exactly how we calculated your estimated water usage & carbon emissions.</a> <br/></br>
+      <a href="info.html#sustainability"> Click here to learn more about how to be sustainable.</a>
+      <br/></br>
+      <a href="info.html#sources"> Sources </a>
+      <br/></br>
+</center>
+<!--
+      <br>
+      <a href="#" id="formulas"> </a>
+    <div class = "formula">  
+      <div>
+        <h2> Formulas </h2>
+      </div>
+      <h3>Carbon Emissions</h3>
+    <p> n = dollars per year (user input) </p>
+<table style="width:100%">
+  <tr>
+    <th>TYPE</th>
+    <th>ANNUAL EMISSION</th> 
+  </tr>
+  <tr>
+    <td>electricity</td>
+    <td>(n * 610.82 * 0.453592) / (0.119) 
+<br> kg CO2 / year</td>
+  </tr>
+  <tr>
+    <td>natural gas</td>
+    <td>(n * 1000 * 53.06 * 99976) / (10.68 * 96.7)
+<br> kg CO2 / year</td>
+  </tr>
+  <tr>
+    <td>fuel oil</td>
+    <td>(n * 10.18) / (4.02)
+<br> kg CO2 / year</td>
+  </tr>
+  <tr>
+    <td>propane</td>
+    <td>(n * 5.72) / (2.47)
+<br> kg CO2 / year</td>
+</table>
+      <p> If you would like to self-calculate your annual water usage, use this <a href="water usage.pdf" target="_blank" title=""> document</a> to calculate. </p>
+    </div>
+
+      <br>     
+      <div class = "sustain">  
+        <a href="#" id="sustainability">  </a> 
+        <div>
+          <h2> Sustainability </h2>
+        </div>
+        <p> Click <a href="https://www.kqed.org/lowdown/11525/how-much-water-do-californians-use-and-what-would-20-percent-less-look-like" target="_blank" title=""> here</a> to get data on how much water Californians use. Here is an <a href="https://www.biologicaldiversity.org/programs/population_and_sustainability/sustainability/live_more_sustainably.html" target="_blank" title=""> article</a> from the Center for Biological Diversity that teaches how to be more sustainable These ways to be sustainable are as simple as eating less meat, thinking twice before shopping, choosing to have a smaller family, and voting! Or click <a href="https://abcnews.go.com/Business/wireStory/trump-showerhead-rule-increase-water-flow-dumped-78882649" target="_blank" title=""> here</a> to learn how much water it really takes to make your meat. You'll be surprised by the results unless you already know. I will link more articles about how to be sustainable at the bottom of the page. </p>
+      </div>
+        <a href="#" id="sources"> </a>
+      <br />
+<div class = "source"> 
+      <div>
+        <h2>Sources </h2>
+      </div>
+         
+  <div>
+    <p> 1. Water usage data </p>
+    <p> <a href="https://www.kqed.org/lowdown/11525/how-much-water-do-californians-use-and-what-would-20-percent-less-look-like" target="_blank" title=""> How much water do Californians use? (KQED) </a></p>
+    <p> <a href="https://www.awwa.org/Publications/Standards" target="_blank" title=""> This will allow you to download a very complicated table about water usage in the United States. (American Water Works Association) </a></p>
+    <p> <a href="https://abcnews.go.com/Business/wireStory/trump-showerhead-rule-increase-water-flow-dumped-78882649" target="_blank" title=""> Rule that allows each nozzle of a showerhead to spray 2.5 gallons of water goes down the drain (ABC News) </a></p>
+    <p> <a href="https://www.beyondmeat.com/whats-new/water-footprint-meat/" target="_blank" title=""> The Water Footprint of Meat (Beyond Meat) </a></p>
+    <p> 2. Sustainability </p>
+    <p> <a href="https://www.biologicaldiversity.org/programs/population_and_sustainability/sustainability/live_more_sustainably.html" target="_blank" title=""> 12 WAYS TO LIVE MORE SUSTAINABLY (Center for Biological Diversity)</a></p>
+    <p> <a href="https://ideasforus.org/20-ways-to-be-more-sustainable-in-2020/" target="_blank" title=""> 20 Ways To Be More Sustainable in 2020 (Ideas For Us)</a></p>
+    <p> <a href="https://www.foodnavigator.com/Article/2021/07/12/How-can-consumers-be-empowered-to-eat-healthy-and-sustainable-foods" target="_blank" title=""> How can consumers be empowered to eat healthy and sustainable foods? (Food Navigator) </a> </p>
+    <p> <a href="https://www.aplf.com/en-US/leather-fashion-news-and-blog/blog/contentdetail/ArticleID/47967" target="_blank" title=""> 
+  <p> --- </p>  </a>
+  </div>
+</div>
+-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+<br>
+  <footer>
+		Created by the Sage Hill Coders (Arietta, Ryan, Nicole, & Sabrina) for HackTable 2021.
+  </footer>
+</html>
